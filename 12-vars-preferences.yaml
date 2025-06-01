@@ -1,7 +1,7 @@
 - name: variable preferences
   hosts: local
   connection: local
-  vars:
+  vars_files:
     GREETING: "Hello from play"
 
   vars_files:
