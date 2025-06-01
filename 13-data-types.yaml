@@ -1,0 +1,19 @@
+- name: ansible datatypes
+  hosts: local
+  connection: local
+  vars:
+    Duration: 120     # number
+    course: ansible   #string
+    IS_LIVE: true     #boolean
+    Tools:            #list 
+    - Linux
+    - shell
+    - ansible
+    Concepts:   # map or a dictionary
+      CT: Jenkins
+      Scripting: "shell, Ansible, Terraform, Python"
+
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Course is {{ Course }}, Duration: {{ Duration }}, is live? {{ IS_LIVE }}, tools are {{ Tools }}, Concepts are : {{ Concepts }}"
