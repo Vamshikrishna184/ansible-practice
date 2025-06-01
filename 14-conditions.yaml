@@ -12,6 +12,8 @@
 
 
   - name : print is the number is greater than 100
+    vars:
+      number: 143
     ansible.builtin.debug:
       msg: "Given number {{ number }} is greater than 100"
     when: number> 100
